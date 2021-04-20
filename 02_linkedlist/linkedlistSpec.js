@@ -2,10 +2,12 @@ describe("Una linked list", function () {
   var linkedList;
 
   beforeEach(function () {
+    // Al igual que en 'queues' crearás un constructor llamado 'LinkedList'.
+    // Este contendrá una *lista doblemente enlazada*.
     linkedList = new LinkedList();
   });
 
-  it("tiene metodos `addToTail`, `addToHead`, `removeTail`,`removeHead`, y `search`", function () {
+  xit("tiene métodos `addToTail`, `addToHead`, `removeTail`,`removeHead`, y `search`", function () {
     expect(typeof linkedList.addToTail).toBe("function");
     expect(typeof linkedList.addToHead).toBe("function");
     expect(typeof linkedList.removeTail).toBe("function");
@@ -13,35 +15,44 @@ describe("Una linked list", function () {
     expect(typeof linkedList.search).toBe("function");
   });
 
-  it("empiezan con head y tail como falsos", function () {
+  xit("empieza con head y tail como falsos", function () {
+    // Creá dos Propiedades head y tail, ambas tienen que estar vacías por defecto.
+    // Representarán los *punteros* al inicio y final de la lista.
+    // "Falsy" hace referencia a un valor que da *falso* evaluado como 'Boolean'. ¿Te acordás cuáles son?
     expect(linkedList.head).toBeFalsy();
     expect(linkedList.tail).toBeFalsy();
+    // ¿Qué esperás que haga 'removeHead'? ¿Cómo debería actuar si la lista está vacía?
     expect(linkedList.removeHead()).toBeFalsy();
   });
 
-  it("tiene una clase Node para representar un nodo", function () {
+  xit("tiene una clase Node para representar un nodo", function () {
     expect(typeof Node).toBe("function");
     // Ya existe un objeto llamado "Node" en el explorador.
-    // El siguiente spec verifica que hayas creado uno propio
+    // El siguiente spec verifica que hayas creado uno propio.
     expect(isNative(Node)).toBe(false);
     function isNative(fn) {
       return /\{\s*\[native code]\s*\}/.test("" + fn);
     }
   });
 
-  it(" La clase Node deberia tomar un valor como argumento y definir next y previous como null por default", function () {
+  xit(" La clase Node debe tomar un valor como argumento y definir next y previous como null por default", function () {
     var node = new Node("test");
+    // Recordá cargar los valores por defecto.
     expect(node.value).toBe("test");
     expect(node.next).toBe(null);
     expect(node.previous).toBe(null);
   });
 
-  it("linkedlist deberia usar la clase Node para agregar nodos", function () {
+  xit("linkedlist debe usar la clase Node para agregar nodos", function () {
+    // Vamos a almacenar cada elemento de la lista en forma de nodos.
+    // Los punteros deberán actualizarse a medida que la lista cambie.
     linkedList.addToTail("first");
+    // ¿Qué significa que tail sea una instancia de 'Node'? ¿Cómo hago para que eso pase?
     expect(linkedList.tail instanceof Node).toBe(true);
   });
 
-  it("si solo un nodo es agregado al head deberia estar tambien apuntado por el tail", function () {
+  xit("al agregar el primer nodo, tanto 'head' como 'tail' apuntarán a él", function () {
+    // Para este 'spec' es muy importante que recuerdes la diferencia entre valor y referencia. https://www.youtube.com/watch?v=AvkyOrWkuQc
     linkedList.addToHead("first");
     expect(linkedList.head.value).toBe("first");
     expect(linkedList.head.next).toBeFalsy();
@@ -49,7 +60,9 @@ describe("Una linked list", function () {
     expect(linkedList.head).toBe(linkedList.tail);
   });
 
-  it("deberia devolver el head en removeHead", function () {
+  // A partir de aca vas a tener que avanzar por tu cuenta.
+
+  xit("debe devolver el head en removeHead", function () {
     linkedList.addToTail("first");
     linkedList.addToTail("second");
     linkedList.addToTail("third");
@@ -58,7 +71,7 @@ describe("Una linked list", function () {
     expect(linkedList.removeHead()).toBe("third");
   });
 
-  it("deberia estar seguro que la propiedad previous de un nuevo head sea null", function () {
+  xit("debe estar seguro de que la propiedad 'previous' de un nuevo 'head' sea null", function () {
     linkedList.addToTail("first");
     linkedList.addToTail("second");
     linkedList.addToTail("third");
@@ -66,15 +79,15 @@ describe("Una linked list", function () {
     expect(linkedList.head.previous).toBe(null);
   });
 
-  it("deberia asegurarse que el next de un nuevo tail sea null", function () {
-    linkedList.addToTail("first");
-    linkedList.addToTail("second");
+  xit("debe asegurarse de que el 'next' de un nuevo 'tail' sea null", function () {
+  linkedList.addToTail("first");
+  linkedList.addToTail("second");
     linkedList.addToTail("third");
     expect(linkedList.removeTail()).toBe("third");
     expect(linkedList.tail.next).toBe(null);
   });
 
-  it("deberia poder agregar al head y al tail", function () {
+  xit("debe poder agregar al 'head' y al 'tail'", function () {
     linkedList.addToTail("second");
     linkedList.addToHead("first");
     linkedList.addToTail("third");
@@ -83,16 +96,16 @@ describe("Una linked list", function () {
     expect(linkedList.removeHead()).toBe("third");
   });
 
-  it("deberia devolver el tail con removeTail", function () {
+  xit("debe devolver el 'tail' con 'removeTail'", function () {
     linkedList.addToTail("second");
     linkedList.addToHead("third");
     linkedList.addToTail("first");
     expect(linkedList.removeTail()).toBe("first");
     expect(linkedList.removeTail()).toBe("second");
     expect(linkedList.removeTail()).toBe("third");
-  });
+  x});
 
-  it("deberia eliminar el head y el tail cuando el ultimo nodo es", function () {
+  xit("debe eliminar el 'head' y el 'tail' cuando sea el último nodo", function () {
     expect(linkedList.removeHead()).toBeFalsy();
     linkedList.addToTail("one");
     expect(linkedList.removeHead()).toBe("one");
@@ -101,7 +114,7 @@ describe("Una linked list", function () {
     expect(linkedList.tail).toBeFalsy();
   });
 
-  it("deberia devolver los valores correctos para buscar", function () {
+  xit("debe devolver los valores correctos para buscar", function () {
     linkedList.addToTail("one");
     linkedList.addToTail("two");
     linkedList.addToTail("three");
@@ -113,7 +126,7 @@ describe("Una linked list", function () {
     expect(linkedList.search("four")).toBe("four");
   });
 
-  it("deberia poder tomar strings y functiones ambos como search inputs", function () {
+  xit("debe tomar Strings y Functions como search inputs", function () {
     linkedList.addToTail("one");
     linkedList.addToTail("two");
     expect(
@@ -123,9 +136,9 @@ describe("Una linked list", function () {
     ).toBe("two");
   });
 
-  // Si el test anterior está correctamente realizado, los siguientes tests deberían pasar automáticamente
+  // Si realizaste bien el test anterior, los siguientes pasarán automáticamente
 
-  it("deberia poder buscar por lo tanto no solo strings pero tambien objetos", function () {
+  xit("debe buscar no solo Strings sino también Objetos", function () {
     function UserNode(name, email, city) {
       this.name = name;
       this.email = email;
@@ -133,31 +146,31 @@ describe("Una linked list", function () {
     }
 
     linkedList.addToHead(
-      new UserNode("Toni", "toni@plataforma5.la", "Buenos Aires")
+      new UserNode("Luke", "luke@skywalker.com", "Tatooine")
+      );
+    linkedList.addToHead(
+      new UserNode("Leia", "leia@skywalker.com", "Alderaan")
     );
     linkedList.addToHead(
-      new UserNode("Facu", "facu@plataforma5.la", "Buenos Aires")
-    );
-    linkedList.addToHead(
-      new UserNode("Fofo", "fofo@plataforma5.la", "Tucuman")
+      new UserNode("Chewbacca", "chewie@chewie.com", "Kashyyyk")
     );
 
     expect(
       linkedList.search(function (userNode) {
-        return userNode.name === "Toni";
+        return userNode.name === "Luke";
       }).email
-    ).toBe("toni@plataforma5.la");
+    ).toBe("luke@skywalker.com");
 
     expect(
       linkedList.search(function (userNode) {
-        return userNode.email === "facu@plataforma5.la";
+        return userNode.email === "leia@skywalker.com";
       }).city
-    ).toBe("Buenos Aires");
+    ).toBe("Alderaan");
 
     expect(
       linkedList.search(function (userNode) {
-        return userNode.city === "Tucuman";
+        return userNode.city === "Kashyyyk";
       }).name
-    ).toBe("Fofo");
+    ).toBe("Chewbacca");
   });
 });
