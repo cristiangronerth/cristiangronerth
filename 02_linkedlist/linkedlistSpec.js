@@ -80,8 +80,8 @@ describe("Una linked list", function () {
   });
 
   xit("debe asegurarse de que el 'next' de un nuevo 'tail' sea null", function () {
-  linkedList.addToTail("first");
-  linkedList.addToTail("second");
+    linkedList.addToTail("first");
+    linkedList.addToTail("second");
     linkedList.addToTail("third");
     expect(linkedList.removeTail()).toBe("third");
     expect(linkedList.tail.next).toBe(null);
@@ -103,7 +103,7 @@ describe("Una linked list", function () {
     expect(linkedList.removeTail()).toBe("first");
     expect(linkedList.removeTail()).toBe("second");
     expect(linkedList.removeTail()).toBe("third");
-  x});
+  });
 
   xit("debe eliminar el 'head' y el 'tail' cuando sea el último nodo", function () {
     expect(linkedList.removeHead()).toBeFalsy();
