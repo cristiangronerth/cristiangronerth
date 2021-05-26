@@ -1,10 +1,32 @@
+# Estructura de Datos
+
 ![logop5](https://p5-hall-of-fame.s3.amazonaws.com/p5logo.png)
 
-# 01 Estructura de Datos
+### Objetivos
 
-Para más información busquen en [Pledu](https://pledu.plataforma5.la/modules/65638ca8-d8a1-43ab-a950-58ad6d6f42b3)
+En este módulo:
 
-### Mas Estructuras!
+1. Aprenderás sobre dos conceptos fundamentales para entender mejor la **Programación Orientada a Objetos**:
+  - **Tipos de Datos Abstractos** (*Abstract Data Types* o *ADT* por sus siglas en inglés).
+  - **Estructuras de Datos** (*Data Structures* o *DS* por sus siglas en inglés).
 
-Si ya terminaste y todavia queda tiempo podes implementar un [Circular-Buffer Queue](https://en.wikipedia.org/wiki/Circular_buffer) y un [Graph](https://en.wikipedia.org/wiki/Graph_ (abstract_data_type)). En los specs dentro de la carpeta extra-credit vas a encontrar más explicación de lo que tenes que hacer. Recomendamos empezar con el Queue.
+🛎  **Recordá**: La Programación Orientada a Objetos (POO) es una manera de programar que facilita el desarrollo de sistemas complejos y de gran tamaño.
+
+2. Escribirás las implementaciones JavaScript de algunos ADT y DS: 
+  - _Queues_ (colas).
+  - _Linked Lists_ (listas anidadas).
+  - _Hash Tables_ (matriz asociativa).
+  - _Binary Search Trees_ (árboles de búsqueda binarios).
+
+3. Profundizarás tus conocimientos de JavaScript, especialmente las Variables y su uso por referencia.
+
+Lo aprendido en este módulo te servirá porque:
+- Algunas empresas toman este tema como parte de los desafíos o *challenges* antes de contratar programador@s.
+- Sirve para escribir código más eficiente.
+- Es útil para los entornos que trabajan con *Big Data*.
+- Practicarás OOP.
+
+### Pledu
+
+Hacé _click_ acá para acceder al módulo correspondiente en Pledu: [Estructura de datos](https://pledu.plataforma5.la/modules/65638ca8-d8a1-43ab-a950-58ad6d6f42b3).
 
