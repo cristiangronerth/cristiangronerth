@@ -28,5 +28,5 @@ Lo aprendido en este módulo te servirá porque:
 
 ### Pledu
 
-Hacé _click_ acá para acceder al módulo correspondiente en Pledu: [Estructura de datos](https://pledu.plataforma5.la/modules/65638ca8-d8a1-43ab-a950-58ad6d6f42b3).
+Hacé [_click_ acá](https://pledu.plataforma5.la/modules/65638ca8-d8a1-43ab-a950-58ad6d6f42b3) para acceder al módulo correspondiente en Pledu.
 
