@@ -1,4 +1,4 @@
-describe("Una linked list", function () {
+describe("Una Linked List", function () {
   var linkedList;
 
   beforeEach(function () {
@@ -7,7 +7,7 @@ describe("Una linked list", function () {
     linkedList = new LinkedList();
   });
 
-  xit("tiene métodos `addToTail`, `addToHead`, `removeTail`,`removeHead`, y `search`", function () {
+  xit("tiene métodos `addToTail`, `addToHead`, `removeTail`,`removeHead` y `search`", function () {
     expect(typeof linkedList.addToTail).toBe("function");
     expect(typeof linkedList.addToHead).toBe("function");
     expect(typeof linkedList.removeTail).toBe("function");
@@ -35,7 +35,7 @@ describe("Una linked list", function () {
     }
   });
 
-  xit(" La clase Node debe tomar un valor como argumento y definir next y previous como null por default", function () {
+  xit("tiene nodos que, por default, contienen las Propiedades next y previous como null", function () {
     var node = new Node("test");
     // Recordá cargar los valores por defecto.
     expect(node.value).toBe("test");
@@ -43,7 +43,7 @@ describe("Una linked list", function () {
     expect(node.previous).toBe(null);
   });
 
-  xit("linkedlist debe usar la clase Node para agregar nodos", function () {
+  xit("debe usar la clase Node para agregar nodos", function () {
     // Vamos a almacenar cada elemento de la lista en forma de nodos.
     // Los punteros deberán actualizarse a medida que la lista cambie.
     linkedList.addToTail("first");
@@ -51,7 +51,7 @@ describe("Una linked list", function () {
     expect(linkedList.tail instanceof Node).toBe(true);
   });
 
-  xit("al agregar el primer nodo, tanto 'head' como 'tail' apuntarán a él", function () {
+  xit("al agregar el primer nodo, tanto `head` como `tail` apuntarán a él", function () {
     // Para este 'spec' es muy importante que recuerdes la diferencia entre valor y referencia. https://www.youtube.com/watch?v=AvkyOrWkuQc
     linkedList.addToHead("first");
     expect(linkedList.head.value).toBe("first");
