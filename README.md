@@ -1,5 +1,6 @@
 ### Hi there 👋 
 #### My name is Cristian
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cristiangronerth/)
 #### I´m a  Full Stack Developer Jr.
 
 Skills: NODE JS / REACT / EXPRESS / POSTGRE SQL
